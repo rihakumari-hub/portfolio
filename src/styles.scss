@@ -1,0 +1,105 @@
+@use './styles/variables' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+// body {
+//   margin: 0;
+//   background: $bg-primary;
+
+// }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    //    radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.45), transparent 25%),
+    // radial-gradient(circle at 90% 20%, rgba(59, 130, 246, 0.40), transparent 25%),
+    // radial-gradient(circle at 20% 90%, rgba(236, 72, 153, 0.25), transparent 20%),
+    // radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.35), transparent 30%);
+
+    // linear-gradient(170deg, rgba(10, 10, 12, 0.35), #0f172a, #0e0d13);
+    linear-gradient(170deg, rgba(201, 22, 139, 0.35), #102454, #941877);
+
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  color: $text-primary;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 60px 10%;
+  // background: #f5f5f5;
+}
+
+.main-card{
+  background: linear-gradient(
+      145deg,
+      rgba(139, 92, 246, 0.15),
+      rgba(17, 24, 39, 1)
+    );
+}
+
+/* styles.scss */
+
+.highlight {
+  font-weight: 600;
+  // padding: 2px 8px;
+  // border-radius: 6px;
+  // display: inline-block;
+  // margin: 0 2px;
+  // transition: all 0.3s ease;
+}
+
+.highlight:hover {
+  transform: translateY(-2px);
+}
+
+.highlight-purple {
+  color: #c084fc;
+  // background: rgba(192, 132, 252, 0.12);
+}
+
+.highlight-blue {
+  color: #3b82f6;
+  // background: rgba(96, 165, 250, 0.12);
+}
+
+.highlight-green {
+  color: #34d399;
+  // background: rgba(52, 211, 153, 0.12);
+}
+
+.highlight-orange {
+  color: #fb923c;
+  // background: rgba(251, 146, 60, 0.12);
+}
+
+.highlight-pink {
+  color: #f472b6;
+  // background: rgba(244, 114, 182, 0.12);
+}
+
+.highlight-red {
+  color: #ef4444;
+  // background: rgba(244, 114, 182, 0.12);
+}

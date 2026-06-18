@@ -1,0 +1,91 @@
+.education-section {
+  color: #fff;
+  padding: 100px 0% 0%;
+}
+
+.subtitle {
+  color: #8f8fa8;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-header h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.education-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.education-details {
+  flex: 1;
+}
+
+.education-details h2 {
+  font-size: 3rem;
+   background: linear-gradient(135deg, #06b6d4, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.education-details h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.duration {
+  color: #b8b8c7;
+  margin-bottom: 25px;
+}
+
+.last-content {
+  margin-bottom: 0% !important;
+}
+
+.education-details p {
+  line-height: 1.8;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #b5b5b5;
+}
+
+.education-image {
+  flex: 0 0 350px;
+  text-align: center;
+}
+
+.education-image img {
+  width: 100%;
+  max-width: 320px;
+  object-fit: contain;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .education-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .section-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .education-details h2 {
+    font-size: 2.2rem;
+     background: linear-gradient(135deg, #06b6d4, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  }
+}

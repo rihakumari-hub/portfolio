@@ -1,0 +1,77 @@
+<div class="ai-modal">
+
+  <!-- HEADER -->
+  <div class="header">
+
+    <div class="title-section">
+
+      <div class="icon">✨</div>
+
+      <div>
+        <h2>Ask AI About Me</h2>
+        <p>Get to know Riha Kumari</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- CHAT -->
+  <div class="chat-container">
+
+    @for (msg of messages; track $index) {
+
+    <div
+      class="message"
+      [class.user]="msg.sender === 'user'"
+      [class.bot]="msg.sender === 'bot'">
+
+      {{ msg.text }}
+
+    </div>
+
+    }
+
+    @if(isTyping){
+
+    <div class="typing">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    }
+
+    <div class="suggestions">
+
+      @for (q of suggestions; track q) {
+
+      <button (click)="sendSuggestion(q)">
+        {{ q }}
+      </button>
+
+      }
+
+    </div>
+
+  </div>
+
+  <!-- INPUT -->
+  <div class="input-section">
+
+    <input
+      [(ngModel)]="message"
+      placeholder="Ask anything about me..."
+      (keyup.enter)="sendMessage()">
+
+    <button
+      class="send-btn"
+      (click)="sendMessage()">
+
+      ➤
+
+    </button>
+
+  </div>
+
+</div>

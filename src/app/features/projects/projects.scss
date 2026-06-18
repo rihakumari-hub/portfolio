@@ -1,0 +1,117 @@
+@use '../../../styles/variables' as *;
+
+.projects-section {
+  color: #fff;
+}
+
+
+.section-header {
+  width: 100%;
+  text-align: left !important;
+  margin-bottom: 50px;
+}
+
+.section-header span,
+.section-header h2,
+.section-header p {
+  text-align: left !important;
+}
+
+.section-header span {
+  color: #6a627c;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.section-header p {
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.description {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.description p {
+  width: 100%;        /* full width */
+  max-width: 100%;    /* remove restriction */
+  padding: 0 20px;    /* spacing on sides */
+  text-align: center; /* or left if you prefer */
+  line-height: 1.8;
+  color: #94a3b8;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.project-card {
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 20px;
+  padding: 28px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: #8b5cf6;
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+}
+
+.project-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(139, 92, 246, 0.15);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.project-card h4 {
+  color: #8b5cf6;
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.project-card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-stack span {
+  background: rgba(139, 92, 246, 0.15);
+  color: #c4b5fd;
+  padding: 7px 12px;
+  border-radius: 30px;
+  font-size: 13px;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+

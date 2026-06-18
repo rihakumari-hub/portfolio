@@ -1,0 +1,84 @@
+@use '../../../../styles/variables' as *;
+
+.navbar {
+  width: 100%;
+  padding: 16px 10%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  // background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* NAV LIST */
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  align-items: center;
+}
+
+/* NORMAL LINKS */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+
+  position: relative;
+  transition: 0.3s;
+}
+
+/* hover underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #a855f7;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #a855f7;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* AI BUTTON STYLE (inside nav) */
+.ai-btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+  color: white !important;
+
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+
+  cursor: pointer;
+}
+
+/* remove underline animation for AI button */
+.ai-btn::after {
+  display: none;
+}
